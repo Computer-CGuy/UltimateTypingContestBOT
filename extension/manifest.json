@@ -1,0 +1,21 @@
+{
+  "name": "bear",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["*://app.typrx.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["jquery.min.js","background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Bear"
+  },
+
+  "permissions": ["tabs"]
+}
